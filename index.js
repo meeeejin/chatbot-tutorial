@@ -11,6 +11,7 @@ app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
 // Creates the endpoint for our webhook
 app.post('/webhook', (req, res) => {
+  const VERIFY_TOKEN = "mijin";
 
   let body = req.body;
 
@@ -37,10 +38,9 @@ app.post('/webhook', (req, res) => {
 
 // Adds support for GET requests to our webhook
 app.get('/webhook', (req, res) => {
-//  const VERIFY_TOKEN = "VERIFY_TOKEN";
 
   // Your verify token. Should be a random string.
-  let VERIFY_TOKEN = "<YOUR_VERIFY_TOKEN>"
+  let VERIFY_TOKEN = "mijin"
 
   // Parse the query params
   let mode = req.query['hub.mode'];
