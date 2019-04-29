@@ -90,15 +90,15 @@ function handleMessage(sender_psid, received_message) {
       "text": "Here is a quick reply!",
       "quick_replies": [
         {
-          content_type: "text",
-          title: "dogs",
-          payload: "dogs"
+          "content_type": "text",
+          "title": "dogs",
+          "payload": "dogs"
         }, {
-          content_type: "text",
-          title: "cats",
-          payload: "cats"
+          "content_type": "text",
+          "title": "cats",
+          "payload": "cats"
         }, {
-          content_type: "location"
+          "content_type": "location"
         }]
     }
   } else if (received_message.attachments) {
