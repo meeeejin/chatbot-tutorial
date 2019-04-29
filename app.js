@@ -34,7 +34,10 @@ app.post('/webhook', (req, res) => {
       // pass the event to the appropriate handler function
       if (webhook_event.message) {
         console.log(webhook_event.message);
-        console.log(webhook_event.message.quick_reply.payload);
+        if (webhook_event.message.quick_reply.payload) {
+          console.log(webhook_event.message.quick_reply.payload);
+          handlePostback(sender_psid, webhook_event.message.quick_reply.payload);
+        }
         handleMessage(sender_psid, webhook_event.message);        
       } else if (webhook_event.postback) {
         console.log(webhook_event.postback)
