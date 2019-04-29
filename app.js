@@ -37,8 +37,9 @@ app.post('/webhook', (req, res) => {
         if (webhook_event.message.quick_reply.payload) {
           console.log(webhook_event.message.quick_reply.payload);
           handlePostback(sender_psid, webhook_event.message.quick_reply.payload);
-        }
-        handleMessage(sender_psid, webhook_event.message);        
+        } else {
+          handleMessage(sender_psid, webhook_event.message); 
+        }       
       } else if (webhook_event.postback) {
         console.log(webhook_event.postback)
         handlePostback(sender_psid, webhook_event.postback);
