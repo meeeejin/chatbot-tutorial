@@ -97,6 +97,8 @@ function handleMessage(sender_psid, received_message) {
           content_type: "text",
           title: "cats",
           payload: "cats"
+        }, {
+          content_type: "location"
         }]
     }
   } else if (received_message.attachments) {
