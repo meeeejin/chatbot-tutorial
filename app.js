@@ -144,7 +144,12 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Thanks!" }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
-  }
+  } else if (payload == "cats") {
+    response = constructTextResponse("Oh, I also have two cats!");
+} else if (payload == "dogs") {
+    response = constructTextResponse("Dogs look like dolls..");
+}
+
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
