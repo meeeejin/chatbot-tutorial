@@ -92,11 +92,11 @@ function handleMessage(sender_psid, received_message) {
         {
           content_type: "text",
           title: "dogs",
-          payload: "quick_dogs"
+          payload: "dogs"
         }, {
           content_type: "text",
           title: "cats",
-          payload: "quick_cats"
+          payload: "cats"
         }]
     }
   } else if (received_message.attachments) {
@@ -146,9 +146,9 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Oops, try sending another image." }
   } else if (payload == "cats") {
     response = constructTextResponse("Oh, I also have two cats!");
-} else if (payload == "dogs") {
-    response = constructTextResponse("Dogs look like dolls..");
-}
+  } else if (payload == "dogs") {
+      response = constructTextResponse("Dogs look like dolls..");
+  }
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
