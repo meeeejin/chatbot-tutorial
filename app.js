@@ -90,9 +90,14 @@ function handleMessage(sender_psid, received_message) {
       "text": "Here is a quick reply!",
       "quick_replies": [
         {
-          "content_type":"location"
-        }
-        ]
+          content_type: "text",
+          title: "dogs",
+          payload: "quick_dogs"
+        }, {
+          content_type: "text",
+          title: "cats",
+          payload: "quick_cats"
+        }]
     }
   } else if (received_message.attachments) {
     // Get the URL of the message attachment
