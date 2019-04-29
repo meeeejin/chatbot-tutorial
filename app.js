@@ -91,10 +91,12 @@ function handleMessage(sender_psid, received_message) {
       "quick_replies": [
         {
           "content_type": "text",
+          "type": "postback",
           "title": "dogs",
           "payload": "dogs"
         }, {
           "content_type": "text",
+          "type": "postback",
           "title": "cats",
           "payload": "cats"
         }, {
