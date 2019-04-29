@@ -92,10 +92,9 @@ function handleMessage(sender_psid, received_message) {
         title: "dogs",
         //payload: "quick_menu"
       }, {
-          content_type: "text",
-          title: "cats"  ,
-          image_url: "http://example.com/img/rabbit.png",
-          //payload: "quick_next_quiz"
+        content_type: "text",
+        title: "cats",
+        //payload: "quick_next_quiz"
       }]
     }
   } else if (received_message.attachments) {
